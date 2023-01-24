@@ -33,17 +33,13 @@ a {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
   text-align: center;
-
   font-size: 16px;
-
   color: #fff;
-
   background-color: #1e1e1e;
-
   border: none;
   outline: none;
+  border-radius: 8px;
 }
 
 .layout {
@@ -82,4 +78,103 @@ a {
 
 .item .circle.expense {
   background-color: #FF1935;
+}
+
+.item .item__left,
+.item .item__right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.form input,
+.form select {
+  border: none;
+  outline: none;
+
+  font-size: 16px;
+
+  padding: 12px 16px;
+
+  box-shadow: 0 0 16px -2px rgba(0, 0, 0, 0.3);
+
+  border-radius: 8px;
+}
+
+.form form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wrapper {
+  margin-top: 24px;
+}
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.filter button {
+  border: none;
+  outline: none;
+
+  padding: 0;
+
+  font-size: 16px;
+  background-color: transparent;
+
+  font-weight: 600;
+}
+
+.item .item__button {
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
+  gap: 4px;
+}
+
+.pagination button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  --size: 32px;
+
+  width: var(--size);
+  height: var(--size);
+
+  font-size: 16px;
+  font-weight: 400;
+
+  border-radius: 8px;
+  border: 1px solid #1e1e1e;
+
+  background-color: transparent;
+
+  cursor: pointer;
 }
