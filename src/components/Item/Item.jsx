@@ -1,3 +1,5 @@
+import { CATEGORIES } from "../../data/categories";
+
 const Item = ({ item }) => {
 
     const { id, category, type, total } = item;
@@ -9,13 +11,13 @@ const Item = ({ item }) => {
                     {
                         type === 'income'
                             ?
-                            <i class="fa-solid fa-credit-card"></i>
+                            <i className="fa-solid fa-credit-card"></i>
                             :
-                            <i class="fa-solid fa-basket-shopping"></i>
+                            <i className="fa-solid fa-basket-shopping"></i>
                     }
                 </div>
                 <p className="category">
-                    Категория: {category}
+                    Категория: {CATEGORIES[category]}
                 </p>
             </div>
 
@@ -25,7 +27,7 @@ const Item = ({ item }) => {
                 </p>
 
                 <button className="item__button">
-                    <i class="fa-solid fa-trash"></i>
+                    <i className="fa-solid fa-trash"></i>
                 </button>
             </div>
         </div>
