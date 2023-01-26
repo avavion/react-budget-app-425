@@ -6,9 +6,32 @@ import Storage from "../services/StorageService";
 import Item from "../components/Item/Item";
 import CreateItemForm from "../components/CreateItemForm/CreateItemForm";
 import Filter from "../components/Filter/Filter";
+import Category from "../components/Category/Category";
 
 const initialItemsState = [];
 const initialBalanceState = 0;
+
+const categories = [
+    {
+        src: "...",
+        text: "adsaada"
+    },
+    {
+        src: "...",
+        text: "adsaada"
+    },
+    {
+        src: "...",
+        text: "adsaada"
+    }, {
+        src: "...",
+        text: "adsaada"
+    },
+    {
+        src: "asda",
+        text: "Мороженное"
+    }
+]
 
 const HomePage = () => {
     const [balance, setBalance] = useState(initialBalanceState);
@@ -31,7 +54,18 @@ const HomePage = () => {
     return (
         <section>
             <div className="container">
+
+
                 <div className="layout">
+
+                    {
+                        categories.map((category) => {
+                            return (
+                                <Category url={category.src} text={category.text} />
+                            )
+                        })
+                    }
+
                     <header>
                         <h1>Общий баланс: {formatMoney(balance)}</h1>
                     </header>
